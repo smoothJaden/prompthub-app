@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    letter-spacing: .4px;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: rgb(214, 233, 246);
+    width: 100%;
+}
+#todo-container{
+    width: 70%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    padding-top: 10px;
+}
+header{
+    width: 100%;
+    background-color: rgb(35, 96, 153);
+    color: aliceblue;
+    height: 50%;
+    border-radius: 20px;
+    padding: 20px;
+}
+#name{
+    font-family: sans-serif;
+    padding: 15px 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+.input-container{
+    display: flex;
+}
+ #todo-text{
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: hsl(209, 100%, 72%);
+    color: black;
+    outline: none;
+ }
+ .task-btn{
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    width: 30px;
+    margin-left: -20px;
+    background-color: lightblue;
+    color: rgb(81, 74, 74);
+ }
+ .task-btn:hover{
+    color: rgb(43, 40, 40);
+ }
+ .task-btn:active{
+    color: rgb(22, 21, 21);
+    background-color: rgb(150, 211, 231);
+ }
+#task-container{
+    margin-top: -200px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: aliceblue;
+    height: 85%;
+    padding: 20px;
+}
+#task-container > h2{
+    text-transform: capitalize;
+}
+#task-count{
+    font-size: 40px;
+    color: rgb(35, 96, 153);;
+}
+.task{
+    padding: 5px 0;
+}
+.task > .task-item{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 10px;
+    margin: 10px 0;
+    background-color: rgb(202, 235, 255);
+}
+.task-item > p{
+    vertical-align: bottom;
+    padding-top: 3px;
+}
+.task-delete{
+    color: rgb(35, 96, 153);
+    font-weight: bold;
+    background: transparent;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}

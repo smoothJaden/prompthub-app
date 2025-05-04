@@ -1,0 +1,141 @@
+/* App specific styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Glassmorphism effect for cards and UI elements */
+.glass-effect {
+  background: rgba(0, 18, 25, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 204, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all var(--transition-normal) ease;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #001219;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.6);
+}
+
+.btn-secondary {
+  background-color: rgba(0, 204, 255, 0.1);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 204, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform var(--transition-normal) ease, 
+              box-shadow var(--transition-normal) ease;
+  border: 1px solid rgba(0, 204, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 204, 255, 0.15);
+  border-color: rgba(0, 204, 255, 0.2);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+  .grid-cols-4 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-3, .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: repeat(1, 1fr); }
+}
+
+/* Particle background (for hero sections) */
+.particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Glow effects */
+.glow {
+  position: relative;
+}
+
+.glow::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  bottom: -50%;
+  background: radial-gradient(
+    circle at center,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.15;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+/* Section spacing */
+.section {
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+} 

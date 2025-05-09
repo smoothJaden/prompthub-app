@@ -1,7 +1,7 @@
 # PromptHub App
 
 <div align="center">
-  <img src="https://placeholder-for-prompthub-logo.com/logo.png" alt="PromptHub Logo" width="200"/>
+  <img src="https://pbs.twimg.com/profile_banners/1916101667487117312/1745677140/1500x500" alt="PromptHub Logo" width="200"/>
   <h3>Frontend Application and User Interface</h3>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)

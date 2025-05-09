@@ -1,0 +1,76 @@
+/* Fix card layout issues */
+
+/* Adjust card content layout */
+.card-content {
+  padding: 20px 20px 10px 20px !important; /* Increase top padding, reduce bottom padding */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Center content */
+  justify-content: flex-start !important;
+}
+
+/* Center icon */
+.card-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 12px !important; /* Slightly increase spacing with title */
+}
+
+/* Center title */
+.principle-card h3 {
+  text-align: center !important;
+  margin-bottom: 10px !important; /* Increase spacing with content */
+  font-size: 1.25rem !important; /* Slightly adjust title size */
+  width: 100% !important;
+}
+
+/* Paragraph text alignment */
+.principle-card p {
+  text-align: center !important;
+  font-size: 0.85rem !important; /* Slightly increase font size for readability */
+  line-height: 1.4 !important; /* Increase line height */
+  margin-bottom: 15px !important; /* Ensure proper spacing below paragraphs */
+  -webkit-line-clamp: 5 !important; /* Limit maximum lines displayed to prevent content overflow */
+  max-height: none !important; /* Remove original fixed height limitation */
+}
+
+/* Special handling for top card */
+.principle-card:nth-child(1) {
+  margin-top: 30px !important; /* Ensure sufficient space above the card */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .principle-card h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .principle-card p {
+    font-size: 0.8rem !important;
+    -webkit-line-clamp: 4 !important; /* Reduce line count on medium screens */
+  }
+  
+  .card-content {
+    padding: 18px 16px 8px 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .principle-card h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .principle-card p {
+    font-size: 0.75rem !important;
+    -webkit-line-clamp: 4 !important;
+  }
+  
+  .card-content {
+    padding: 16px 14px 6px 14px !important;
+  }
+  
+  .card-icon {
+    margin-bottom: 8px !important;
+  }
+} 

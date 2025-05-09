@@ -1,0 +1,122 @@
+/* Fix card layout issues - by increasing height */
+
+/* Increase height for all cards */
+.principle-card {
+  height: 250px !important; /* Original height was 220px, increased by 30px */
+}
+
+/* Adjust card content layout */
+.card-content {
+  padding: 25px 20px 15px 20px !important; /* Increase padding, especially on top */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Center content */
+  justify-content: flex-start !important;
+  height: 100% !important; /* Ensure content fills entire card height */
+}
+
+/* Center icon */
+.card-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 15px !important; /* Increase spacing between icon and title */
+}
+
+/* Center title */
+.principle-card h3 {
+  text-align: center !important;
+  margin-bottom: 12px !important; /* Increase spacing between title and content */
+  font-size: 1.25rem !important;
+  width: 100% !important;
+}
+
+/* Paragraph text alignment */
+.principle-card p {
+  text-align: center !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 15px !important;
+  -webkit-line-clamp: 5 !important;
+  max-height: none !important;
+}
+
+/* Specific position adjustments for each of the four cards */
+.principle-card:nth-child(1) {
+  width: 360px !important;
+  height: 250px !important;
+  margin-top: 15px !important;
+}
+.principle-card:nth-child(2) {
+  width: 360px !important;
+  height: 250px !important;
+}
+.principle-card:nth-child(3) {
+  width: 360px !important;
+  height: 250px !important;
+}
+.principle-card:nth-child(4) {
+  width: 360px !important;
+  height: 250px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .principle-card {
+    height: 230px !important;
+  }
+  
+  .principle-card:nth-child(1),
+  .principle-card:nth-child(2),
+  .principle-card:nth-child(3),
+  .principle-card:nth-child(4) {
+    width: 340px !important;
+    height: 230px !important;
+  }
+  
+  .principle-card h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .principle-card p {
+    font-size: 0.8rem !important;
+    -webkit-line-clamp: 4 !important;
+  }
+  
+  .card-content {
+    padding: 20px 16px 10px 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .principle-card {
+    height: 220px !important;
+  }
+  
+  .principle-card:nth-child(1),
+  .principle-card:nth-child(2),
+  .principle-card:nth-child(3),
+  .principle-card:nth-child(4) {
+    width: 320px !important;
+    height: 220px !important;
+  }
+  
+  .principle-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .principle-card p {
+    font-size: 0.75rem !important;
+    -webkit-line-clamp: 4 !important;
+    line-height: 1.3 !important;
+  }
+  
+  .card-content {
+    padding: 18px 14px 10px 14px !important;
+  }
+  
+  .card-icon {
+    margin-bottom: 10px !important;
+  }
+} 

@@ -1,0 +1,17 @@
+/* Fix divider height, reduce to one quarter of original */
+.section-divider {
+  height: 25px !important; /* Originally 100px, previously reduced to 50px, now halved again */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-divider {
+    height: 20px !important; /* Originally 80px, previously reduced to 40px, now halved again */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-divider {
+    height: 15px !important; /* Originally 60px, previously reduced to 30px, now halved again */
+  }
+} 
